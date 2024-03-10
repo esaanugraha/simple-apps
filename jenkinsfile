@@ -47,7 +47,7 @@ pipeline {
             }
         }
 
-        stage('BUILD COMPOSE-DOCKER') {
+        stage('DOCKER PUSH') {
             steps {
                 sh '''
                 docker push esanugraha/simple-esa:latest'''

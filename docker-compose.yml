@@ -1,0 +1,11 @@
+services:
+  simple-apps:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: simple-apps
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: always

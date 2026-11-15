@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: esanugraha/simple-apps:v3
     container_name: simple-apps
     ports:
       - "3000:3000"

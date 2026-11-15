@@ -11,7 +11,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh'''
-                cd app
                 npm install
                 '''
             }
@@ -20,7 +19,6 @@ pipeline {
         stage('Testing') {
             steps {
                 sh'''
-                cd app
                 npm test
                 npm run test:coverage
                 '''
@@ -30,7 +28,6 @@ pipeline {
         stage('Code Review') {
             steps {
                 sh'''
-                cd app
                 sonar-scanner \
                     -Dsonar.projectKey=simple-apps \
                     -Dsonar.sources=. \
